@@ -82,7 +82,7 @@ export default function ProjectsPage() {
 
      <Link href="/Contact">
      <button className="bg-yellow-700 px-6 py-2 rounded-md text-dark hover:bg-yellow-800 transition duration-300">
-      Let's Talk
+      Let&apos;s Talk
      </button>
      </Link>
      </section>

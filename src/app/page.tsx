@@ -15,7 +15,7 @@ export default function Home() {
         />
         <h1 className="text-4xl font-bold mt-4">Hello, my name is <br /><span className="text-white">Mike William</span></h1>
         <p className="mt-3 max-w-2xl">
-          I'm a Web developer specialized in frontend and backend development web apps. I write about web development on my blog.
+          I&apos;m a Web developer specialized in frontend and backend development web apps. I write about web development on my blog.
         </p>
         <button className="mt-6 px-6 py-2 bg-white text-blue-600 font-semibold rounded-md">
           Hire Me
