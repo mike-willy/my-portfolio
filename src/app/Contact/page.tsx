@@ -7,35 +7,35 @@ import { useState } from "react";
 
 export default function Contact() {
   const [formData, setFormData] = useState({ name: "", email: "", message: "" });
-    const [status, setStatus] = useState("");
-  
-    const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-      setFormData({ ...formData, [e.target.name]: e.target.value });
-    };
-  
-    const handleSubmit = async (e: React.FormEvent) => {
-      e.preventDefault();
-      setStatus("Sending...");
-  
-      try {
-        const response = await fetch("/api/Contact", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify(formData),
-        });
-  
-        const result = await response.json();
-        if (response.ok) {
-          setStatus("Message sent successfully!");
-          setFormData({ name: "", email: "", message: "" }); // Clear form
-        } else {
-          setStatus(result.error || "Failed to send message.");
-        }
-      } catch (error) {
-        setStatus("An error occurred. Please try again.");
+  const [status, setStatus] = useState("");
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setStatus("Sending...");
+
+    try {
+      const response = await fetch("/api/Contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+
+      const result = await response.json();
+      if (response.ok) {
+        setStatus("Message sent successfully!");
+        setFormData({ name: "", email: "", message: "" }); // Clear form
+      } else {
+        setStatus(result.error || "Failed to send message.");
       }
-    };
-  
+    } catch {
+      setStatus("An error occurred. Please try again.");
+    }
+  };
+
   return (
     <div className="bg-blue-500 min-h-screen">
       <Navbar />
