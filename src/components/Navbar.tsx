@@ -39,7 +39,7 @@ export default function Navbar() {
         {/* Logo */}
         <Link href="/">
           <Image
-            src="/MW.png"
+            src="/mw.png"
             alt="Portfolio Logo"
             width={50}
             height={50}
