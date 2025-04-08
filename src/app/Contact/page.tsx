@@ -49,7 +49,7 @@ export default function Contact() {
           className="rounded-full border-4 border-white mt-4"
         />
         <p className="mt-4 max-w-2xl">
-          I'm currently taking on freelance work. If you're interested in hiring me, please fill out the form below.
+          I&apos;m currently taking on freelance work. If you&apos;re interested in hiring me, please fill out the form below.
         </p>
       </section>
 
