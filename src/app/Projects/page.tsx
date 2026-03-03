@@ -31,61 +31,58 @@ export default function ProjectsPage() {
         <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-8 px-4">
           {[
             {
-              title: "Portfolio Website",
-              desc: "A personal portfolio website built with Next.js and Tailwind CSS to showcase my skills, projects, and contact information.",
-            },
-            {
-              title: "Hotel Booking System",
-              desc: "Developed a hotel booking system with HTML/CSS for frontend and PHP backend for room management and reservation features, enhancing the user experience.",
-            },
-            {
-              title: "Blog Platform",
-              desc: "Created a simple blog platform using Strapi for backend and React/Vite frontend to manage and publish articles easily.",
-            },
-            {
-              title: "E-commerce Website (In Progress)",
-              desc: "Currently working on an e-commerce platform with product listings, user authentication, and shopping cart functionality.",
-            },
-            {
-              title: "UX Design",
-              desc: "Designs Interfaces of various projects such as Currently designed for a Client an Online Learning Platform.",
+              title: "The Travel Spark",
+              desc: "A personalized travel planning application using a mood quiz and an AI rule-based recommendation system to suggest destinations and activities aligned with the traveler's emotional state and preferences.",
+              link: "https://bonfire-planner-wr29-4zbalvjuk.vercel.app/",
             },
           ].map((project, index) => (
             <div
               key={index}
-              className="bg-white p-6 rounded-md shadow-md text-left transform hover:-translate-y-2 hover:scale-105 hover:shadow-lg transition-all duration-300"
+              className="bg-white p-6 rounded-md shadow-md text-left transform hover:-translate-y-2 hover:scale-105 hover:shadow-lg transition-all duration-300 flex flex-col"
             >
-              <h3 className="text-xl font-semibold text-blue-800 mb-2">{project.title}</h3>
-              <p className="text-gray-700">{project.desc}</p>
+              <div className="flex-grow">
+                <h3 className="text-xl font-semibold text-blue-800 mb-2">{project.title}</h3>
+                <p className="text-gray-700">{project.desc}</p>
+              </div>
+              <div className="mt-4 pt-4 border-t border-gray-100">
+                <a
+                  href={project.link}
+                  target={project.link === "#" ? "_self" : "_blank"}
+                  rel="noopener noreferrer"
+                  className="inline-block px-4 py-2 bg-blue-600 text-white text-sm font-semibold rounded hover:bg-blue-700 transition-colors"
+                >
+                  View Live Project
+                </a>
+              </div>
             </div>
           ))}
         </div>
       </section>
 
-     {/* Call To Action Section */}
-     <section className="bg-blue-450 py-16 text-center text-white">
-         <Image
-             src="/portfolio.jpg"
-             alt="Profile Picture"
-             width={100}
-             height={100}
-             className="rounded-full mx-auto mb-4"
-     />
-     <h2 className="text-2xl font-bold mb-4">Interested in hiring me for your project?</h2>
-     <p className="max-w-xl mx-auto mb-6">
-         Looking for a passionate developer to build your website or software product? Feel free to reach out via email at <span className="underline">ochiengmikewilliam@gmail.com</span> or use the{" "}
-         <Link href="/Contact" className="underline hover:text-dark-800">
-         Contact
-         </Link>{" "}
+      {/* Call To Action Section */}
+      <section className="bg-blue-450 py-16 text-center text-white">
+        <Image
+          src="/portfolio.jpg"
+          alt="Profile Picture"
+          width={100}
+          height={100}
+          className="rounded-full mx-auto mb-4"
+        />
+        <h2 className="text-2xl font-bold mb-4">Interested in hiring me for your project?</h2>
+        <p className="max-w-xl mx-auto mb-6">
+          Looking for a passionate developer to build your website or software product? Feel free to reach out via email at <span className="underline">ochiengmikewilliam@gmail.com</span> or use the{" "}
+          <Link href="/Contact" className="underline hover:text-dark-800">
+            Contact
+          </Link>{" "}
           page to reach me.
-     </p>
+        </p>
 
-     <Link href="/Contact">
-     <button className="bg-yellow-700 px-6 py-2 rounded-md text-dark hover:bg-yellow-800 transition duration-300">
-      Let&apos;s Talk
-     </button>
-     </Link>
-     </section>
-     </div>
+        <Link href="/Contact">
+          <button className="bg-yellow-700 px-6 py-2 rounded-md text-dark hover:bg-yellow-800 transition duration-300">
+            Let&apos;s Talk
+          </button>
+        </Link>
+      </section>
+    </div>
   );
 }
