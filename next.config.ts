@@ -8,7 +8,6 @@ const nextConfig: NextConfig = {
     // Alternatively, disable specific ESLint rules here
   },
   reactStrictMode: true,
-  swcMinify: true,
 };
 
 export default nextConfig;
