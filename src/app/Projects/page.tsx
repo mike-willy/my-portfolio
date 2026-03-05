@@ -33,7 +33,7 @@ export default function ProjectsPage() {
             {
               title: "Chak Agency Admin Web",
               desc: "A secure automated property management platform for agents to manage properties, monitor tenant records, and track rent with real-time financial reporting and arrears monitoring.",
-              link: "https://chak-property-web-8cg5-9brtkbp0c.vercel.app/",
+              link: "https://chak-property-web.vercel.app/",
             },
             {
               title: "Chak Agency Mobile App",
