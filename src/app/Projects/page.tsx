@@ -43,7 +43,7 @@ export default function ProjectsPage() {
             {
               title: "The Travel Spark",
               desc: "A personalized travel planning application using a mood quiz and an AI rule-based recommendation system to suggest destinations and activities aligned with the traveler's emotional state and preferences.",
-              link: "https://bonfire-planner-wr29-4zbalvjuk.vercel.app/",
+              link: "https://bonfire-planner.vercel.app/",
             },
           ].map((project, index) => (
             <div
