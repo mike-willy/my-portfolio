@@ -20,6 +20,8 @@ export const metadata: Metadata = {
   description: "A portfolio website for showcasing my work.",
 };
 
+import FloatingBadge from "@/components/FloatingBadge";
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -31,6 +33,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         {children}
+        <FloatingBadge />
       </body>
     </html>
   );
