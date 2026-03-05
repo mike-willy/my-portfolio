@@ -19,8 +19,8 @@ export default function ProjectsPage() {
           height={100}
           className="rounded-full border-4 border-white mt-4"
         />
-        <p className="mt-4 max-w-2xl">
-          Here are some of the projects I have worked on — showcasing my skills in coding and design.
+        <p className="mt-4 max-w-2xl text-blue-100">
+          Here are some of the projects I have worked on — showcasing my skills in coding and design, including the Chak Agency Properties ecosystem.
         </p>
       </section>
 
@@ -30,6 +30,16 @@ export default function ProjectsPage() {
 
         <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-8 px-4">
           {[
+            {
+              title: "Chak Agency Admin Web",
+              desc: "A secure automated property management platform for agents to manage properties, monitor tenant records, and track rent with real-time financial reporting and arrears monitoring.",
+              link: "https://chak-property-web-8cg5-9brtkbp0c.vercel.app/",
+            },
+            {
+              title: "Chak Agency Mobile App",
+              desc: "A comprehensive mobile solution for tenants to view tenancy info and submit maintenance requests, while providing landlords with real-time visibility into property performance and rent collection.",
+              link: "https://github.com/mike-willy/chak-property-system/releases/download/v1.0.1/Chak.Property.apk",
+            },
             {
               title: "The Travel Spark",
               desc: "A personalized travel planning application using a mood quiz and an AI rule-based recommendation system to suggest destinations and activities aligned with the traveler's emotional state and preferences.",
